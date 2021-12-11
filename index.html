@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />  <!--Font Awesome Icons-->
+  <link rel="shortcut icon" type="image/webp" href="/images/main/icons/cgr_icon.webp"><!--Website Logo -->
+  <title>Chandra Gupta Roy's Website | CGR</title>
+  <link rel="stylesheet" href="/css/my-nav.css">    <!--        Navbar         -->
+  <script type="module" src="/js template/nav_foot.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background-color: rgb(255, 255, 255);
+    }
+
+    /*   Header  */
+    .header-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row-reverse;
+    }
+    .header-container .col-left {
+      flex: 1;
+      padding: 20px;
+    }
+    .header-container .col-left h1 {
+      font-family: 'montserrat';
+      font-size: 40px;
+      text-transform:uppercase;
+      position: relative;
+      color: transparent;
+      animation: text_revealing 0s ease forwards;
+      /* animation-delay: 1s; */
+      display: inline-block;
+    }
+    .header-container .col-left h1:nth-child(1) {
+      animation-delay: 1s;
+      
+    }
+    .header-container .col-left h1:nth-child(2) {
+      animation-delay: 2s;
+      font-size: 30px;
+    }
+    .header-container .col-left h1:nth-child(3) {
+      animation-delay: 3s;
+      
+    }
+    .header-container .col-left h1:nth-child(1) span {
+      animation-delay: .5s;
+    }
+    .header-container .col-left h1:nth-child(2) span {
+      /* animation-direction: reverse; */
+      animation-delay: 1.5s;
+    }
+    .header-container .col-left h1:nth-child(3) span {
+      animation-delay: 2.5s;
+    }
+    .header-container .col-left h1 span {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 0;
+      left: 0;
+      top: 0;
+      background-color: rgb(0, 0, 0);
+      animation: revealing 1s ease forwards;
+      animation-delay: .5s;
+    }
+    .header-container .col-right {
+      flex: 1;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 20px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      display: block;
+      font-size: 0;
+    }
+    .header-container .col-right img {
+      height: 60vh;
+      width: auto;
+    }
+    @keyframes text_revealing {
+      100% {
+        color: rgb(0, 0, 0);
+      }
+    }
+    @keyframes revealing {
+      50% {
+        width: 100%;
+        left: 0;
+      }
+      100% {
+        left: 100%;
+        width: 0%;
+      }
+    }
+    
+    @media only screen and (max-width: 890px) {
+      .header-container {
+        display: block;
+      }
+      .header-container .col-left h1 {
+        display: block;
+      }
+      .header-container .col-left h1 {
+        font-size: 25px;
+      }
+
+    }
+    /*Header TExt one over*/
+
+
+    /*Social Bar Start*/
+  .Social-menu{
+    z-index: 3;
+    display: block;
+    margin-top: 150px;
+  }
+  .Social-menu ul{
+      padding: 0;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: center;
+      z-index: 3;
+  } 
+  .Social-menu ul li  {
+      list-style: none;
+      margin: 0 15px;} /*spacing*/
+  .Social-menu ul li .fab{
+      font-size: 20px;
+      line-height: 48px;
+      color: #008AFF;}
+  .Social-menu ul li a{
+      position: relative;
+      display: block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #fff;
+      text-align: center;
+      border: #008AFF solid 2px;
+    }
+    @media only screen and (max-width:890px){
+      .Social-menu{
+        margin-top: 10px;
+      }
+    }
+    /*Social Bar    End*/
+    /*Header     Over*/
+
+
+    /* Main Page Content    Starts*/
+
+    .page-color:nth-child(odd){
+      background-color: #008AFF;
+      padding: 50px;
+    }
+    .page-color:nth-child(even){
+      background-color: #ffffff;
+      padding: 50px;
+    }
+    .self-defination h1,.self-defination h3{
+      font-style: italic;
+    }
+    /*Passions Column      Start*/
+    .passions{
+      padding: 100px;
+    }
+    .passions .p-divs{
+      border-radius: 10px;
+      box-shadow: 0px 5px 10px grey;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      position: relative;
+      height: 400px;
+    }
+    .passions .p-divs .ban-label{
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+    }
+    .passions .p-divs a .far{
+      font-size: 50px;
+      color: #002240;
+    }
+    .passions .p-divs-heading .fas{
+      font-size: 25px;
+    }
+    .passions .p-divs p{
+      text-align: right;
+      position: absolute;
+      bottom: 50%;
+      right: 20px;
+      font-style: italic;
+    }
+    .passions .p-divs-heading{
+      border-radius: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom:5px;
+      text-align: center;
+      width:max-content;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      overflow: hidden;
+      background-image: linear-gradient(#008AFF 0%, #0066BF 100%),  url(../images/main/Cover_big.webp);
+      z-index: 0;
+    }
+    .passions .p-divs-heading h1{
+      z-index: 2;
+    }
+    .passions .p-divs-heading a{
+      width: 45px;
+      height: 45px;
+      line-height: 50px;
+      border-radius: 50%;
+      background-color: #E3D924;
+      color: rgb(0, 0, 0);
+    }
+    .passions .p-divs-heading:before{
+      content: '';
+      position: absolute;
+      height: 200px;
+      width: 10px;
+      background: #99dffa;
+      box-shadow: 0 0 10px #99dffa;
+      filter: blur(5px);
+      opacity: 0.8;
+      top: -30px;
+      transform: rotate(-80deg) translateX(20px) translateY(25px);
+      z-index: 1;
+    }
+
+    .passions .graphics{
+      background-image: url(/images/home/fullq/purple\ gradient1.png);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    @media screen and (max-width:890px){
+      .passions{
+        padding: 0;
+      }
+      .page-color:nth-child(even){
+        padding: 10px;
+      }
+      .page-color:nth-child(odd){
+        padding: 10px;
+      }
+      .passion .p-divs{
+        height: 500px;
+      }
+    }
+    /*Passions Column      End*/
+    /*Services     Start*/
+    .service .service-quote{
+      text-transform: uppercase;
+      text-align: center;
+      padding: 20px;
+      font-style: italic;
+    }
+    .service .platform{
+      display: flex;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      justify-content: center;
+    }
+    .service .platform img{
+      width: 200px;
+      height: auto;
+    }
+    .service a .fas{
+      font-size: 50px;
+      color: rgb(255, 255, 255);
+      margin-left: 20px;
+    }
+    /*Services     End*/
+    .page-content .home-quote1 h1{
+      font-style: italic;
+      font-size: 700%;
+      font-variant: small-caps;
+    }
+    .page-content .home-quote1{
+      position: relative;
+    }
+    .page-content .home-quote1 img{
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      height: 400px;
+      opacity: 40%;
+    }
+    @media only screen and (max-width: 890px) {
+      .page-content .home-quote1{
+        font-size:6px;
+      }
+      .page-content .home-quote1 img{
+      position: absolute;
+      left: 10px;
+      top: 25px;
+      height: 100px;
+      opacity: 40%;
+    }
+    }
+    /*All in one css - Just add class name*/
+    .center-text{
+      text-align: center;
+    }
+    .extra-padding{
+      padding: 200px;
+    }
+    .extra-padding-l{
+      padding-left: 20%;
+    }
+    .extra-padding-l-r{
+      padding-left: 300px;
+      padding-right: 300px;
+    }
+    .white-text{
+      color: #ffffff;
+    }
+    .capital{
+      text-transform: capitalize;
+    }
+    .smallcaps{
+      font-variant: small-caps;
+    }
+    .italic{
+      font-style: italic;
+    }
+    .uppercase{text-transform: uppercase;}
+
+  </style>
+</head>
+<body>
+  <header>
+    <my-nav></my-nav>
+    <div class="header-container">
+      <div class="col-right">
+        <img src="images/cgr_blue-pointing.png" alt="img">
+      </div>
+      <div class="col-left">
+        <h1>Hello,&nbsp; <br> <span></span></h1>
+        <h1>I am <br><span></span></h1>
+        <h1>Chandra Gupta Roy <span></span></h1>
+        <br>
+        <div class="Social-menu">
+          <ul>
+            <li><a href="https://youtube.com/c/chandraguptaroy" target="_blank"><i class="fab fa-youtube"></i> </a> </li>
+            <li><a href="https://instagram.com/chandraguptaroy/" target="_blank"><i class="fab fa-instagram"></i> </a> </li>
+            <li><a href="https://twitter.com/chandraguptaroy" target="_blank"><i class="fab fa-twitter"></i> </a> </li>
+            <li><a href="https://facebook.com/thechandraguptaroy" target="_blank"><i class="fab fa-facebook-f"></i> </a> </li>
+          </ul>
+          </div>
+      </div>
+    </div>
+  </header> 
+  <div class="page-content">
+    <div class="home-intro">
+      <div class="self-defination page-color white-text">
+        <h3 class="left-text extra-padding-l">I define myself as,</h3>
+        <h1 class="left-text extra-padding-l">"Multi Passionate Badass Intelligent Gentleman"</h1>
+      </div>
+    <div class="passions page-color">
+      <div class="p-divs-heading center-text">
+        <h1 class="uppercase italic">My Passions:</h1>&nbsp;&nbsp;<a href="#passions-cateogries"><i class="fas fa-arrow-down"></i></a>
+      </div>
+
+      <div class="graphics p-divs" id="passions-cateogries">
+        <p>I love Design/Aesthetics.<br>Just doing this for sports for last 4 years.</p>
+        <div class="ban-label">
+          <h3>Graphic Designing</h3>
+          <a href=""><i class="far fa-arrow-alt-circle-right"></i></a>
+        </div> 
+      </div>
+
+      <div class="graphics p-divs">
+        <p>Idk, but Editing doesn't seems boring to me.<br>It's creating World's Watching.</p>
+        <div class="ban-label">
+          <h3>Video Editing</h3>
+          <a href=""><i class="far fa-arrow-alt-circle-right"></i></a>
+        </div>
+      </div>
+
+      <div class="graphics p-divs">
+        <p>If I have to select one Software,<br>It is AfterFX,❤️</p>
+        <div class="ban-label">
+          <h3>Video Animation</h3>
+          <a href=""><i class="far fa-arrow-alt-circle-right"></i></a>
+        </div>
+      </div>
+
+      <div class="graphics p-divs">
+        <p>Maybe this is Genetic or my life, but I have something to write.<br>Relaised this after learning typing,<br>Hand-writing Sucks! (Personal Preference)</p>
+        <div class="ban-label">
+          <h3>Writing > (Start)Blog</h3> 
+          <a href=""><i class="far fa-arrow-alt-circle-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="service page-color white-text capital smallcaps italic">
+      <h1 style="font-size: 60px;" class="service-quote">"Be the change you want to see in the world"</h1>
+      <h1 style="font-weight:600;" class="center-text">So, Let's start by selling!&nbsp;<img style="height:25px;" src="/images/home/fullq/new-moon-face.png"></h1>
+      <br><br>
+      <div class="platform">
+        <img src="/images/pngs/fiverr_transparent.png">
+        <a href="https://www.fiverr.com/thecgr_" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+      </div>
+      <br>
+      <div class="platform">
+        <img src="/images/pngs/upwork_transparent.png">
+        <a href="https://www.upwork.com/freelancers/~018312e98b73398ec0?s=1017484851352698959"  target="_blank" ><i class="fas fa-external-link-alt"></i></a>
+      </div>
+    </div>
+
+
+
+      <br><br>
+      <div class="home-quote1  page-color center-text">
+        <h1>Just Thinking before doing, is Life-Changing!</h1>
+        <img src="/images/home/quote.webp">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
